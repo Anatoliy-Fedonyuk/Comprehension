@@ -1,0 +1,10 @@
+<data>
+    <users>
+        <user name="Artur" age="13" gender="male" />
+        <user name="Kate" age="39" gender="female" />
+        <user name="Alice" age="67" gender="female" />
+        <user name="Mike" age="90" gender="male" />
+        <user name="Nike" age="66" gender="male" />
+        <user name="lilu" age="23" gender="female" />
+    </users>
+</data>
