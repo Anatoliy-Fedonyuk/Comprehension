@@ -14,3 +14,4 @@ platformdirs==3.8.1
 virtualenv==20.23.1
 Werkzeug==2.3.6
 zipp==3.16.0
+SQLAlchemy==2.0.18
