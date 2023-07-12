@@ -5,7 +5,7 @@ with sq.connect("log_pass.db") as con:
 
     cur.execute("""CREATE TABLE IF NOT EXISTS users
         (name TEXT NOT NULL,
-        login TEXT NOT NULL,
+        login TEXT PRIMARY KEY NOT NULL,
         password TEXT NOT NULL
         )""")
 
@@ -46,5 +46,7 @@ with sq.connect("log_pass.db") as con:
 
     cur.execute("SELECT * FROM users")
     print(cur.fetchall())
+
+    print(cur.execute("SELECT name, login FROM users WHERE login != '' ORDER BY name DESC").fetchall())
 
     # cur.execute("DROP TABLE IF EXISTS users")
