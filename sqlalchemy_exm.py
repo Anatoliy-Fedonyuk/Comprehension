@@ -32,7 +32,8 @@ select_all_result = connection.execute(select_all_query)
 print(select_all_result.fetchall())
 
 # UPDATE
-update_query = db.update(products).where(products.columns.supplier_name=="United Bananas").values(supplier_name="Fruits&Co")
+update_query = db.update(products).where(products.columns.supplier_name == "United Bananas").values(
+    supplier_name="Fruits&Co")
 connection.execute(update_query)
 
 select_all_query = db.select(products)
@@ -46,4 +47,3 @@ connection.execute(delete_query)
 select_all_query = db.select(products)
 select_all_result = connection.execute(select_all_query)
 print(select_all_result.fetchall())
-
