@@ -136,26 +136,26 @@
 # print(repr(c))
 
 ### метод super() и MRO (Method Resolution Order)
-# class A:
-#     def show(self):
-#         print("Метод show в классе A")
-#
-# class B(A):
-#     def show(self):
-#         print("Метод show в классе B")
-#         super().show()
-#
-# class C(A):
-#     def show(self):
-#         print("Метод show в классе C")
-#         super().show()
-#
-# class D(C, B):
-#     pass
-#
-# # Создаем объект класса D и вызываем его метод show
-# obj = D()
-# obj.show()
+class A:
+    def show(self):
+        print("Метод show в классе A")
+
+class B(A):
+    def show(self):
+        print("Метод show в классе B")
+        super().show()
+
+class C(A):
+    def show(self):
+        print("Метод show в классе C")
+        super().show()
+
+class D(C, B):
+    pass
+
+# Создаем объект класса D и вызываем его метод show
+obj = D()
+obj.show()
 
 ### Mixin Classes
 # Пример класса-миксина, предоставляющего логирование
