@@ -159,20 +159,20 @@
 
 ### Mixin Classes
 # Пример класса-миксина, предоставляющего логирование
-# class LoggingMixin:
-#     def log(self, message):
-#         print(f"class [{self.__class__.__name__}] {message}")
-#
-# # Пример класса, использующего класс-миксин
-# class Calculator(LoggingMixin):
-#     def add(self, x, y):
-#         result = x + y
-#         self.log(f"Вычисление: {x} + {y} = {result}")
-#         return result
-#
-# # Создаем объект класса Calculator и используем логирование из класса-миксина
-# calc = Calculator()
-# calc.add(3, 5)
+class LoggingMixin:
+    def log(self, message):
+        print(f"class [{self.__class__.__name__}] {message}")
+
+# Пример класса, использующего класс-миксин
+class Calculator(LoggingMixin):
+    def add(self, x, y):
+        result = x + y
+        self.log(f"Вычисление: {x} + {y} = {result}")
+        return result
+
+# Создаем объект класса Calculator и используем логирование из класса-миксина
+calc = Calculator()
+calc.add(3, 5)
 
 ###
 
