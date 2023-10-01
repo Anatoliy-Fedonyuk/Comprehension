@@ -243,10 +243,11 @@
 # print(next(i))
 
 ### Генераторы - Что? Как?
-def some():
-    yield 1
+def get_list():
+    for x in [1,2,3,4,5]:
+        yield x
 
-obj = some()
-print(obj)
-print(next(obj))
-print(next(obj))
+gen = get_list()
+for x in gen: print(x)
+print(next(gen))    # StopIteration
+
