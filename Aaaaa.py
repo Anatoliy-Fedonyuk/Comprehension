@@ -174,6 +174,53 @@
 # calc = Calculator()
 # calc.add(3, 5)
 
-###
+### Замыкания, Декораторы, Декораторы с аргументами
+# def outer_function(x):
+#     # Это внешняя функция, которая принимает аргумент x
+#     def inner_function(y):
+#         # Это внутренняя функция, которая также принимает аргумент y
+#         return x + y  # Используется переменная x из внешней области видимости
+#
+#     return inner_function  # Внешняя функция возвращает внутреннюю функцию
+#
+#
+# # Создаем замыкание, передавая аргумент 10 во внешнюю функцию
+# closure = outer_function(10)
+# clos2 = outer_function(100)
+# # Теперь можем вызывать closure, как обычную функцию, но она имеет доступ к x из outer_function
+# result = closure(5)  # Результат будет 15, так как x=10, y=5
+# res2 = clos2(-50)
+# print(result)
+# print(res2)
+#
+# def repeat(num):
+#     # Декоратор с аргументом, который определяет, сколько раз функция будет выполнена
+#     def decorator(func):
+#         def wrapper(*args, **kwargs):
+#             for _ in range(num):
+#                 print(func(*args, **kwargs))
+#             return f"{func(*args, **kwargs)} + я тебя {num} раз)"
+#         return wrapper
+#     return decorator
+#
+# @repeat(7)  # Применение декоратора с аргументом: выполнить функцию 3 раза
+# def say_hello(name):
+#     return f"Привет, {name}!"
+#
+# print(say_hello("Анна"))
 
-
+### Итераторы в отличии от итерируемого объекта - реализуют методы Iter и Next!!!
+# # a = [1, 2, 3, 4, 5]
+# a = {33, 4, 2, 5, 7, 3}
+# # a = 'dsdkadjkas'
+# # a = {'a': 23, 'b': 83, 'c': 4, 33: "SOS"}
+#
+# i = iter(a)             # Создаем Итератор тут!
+# # i = iter(a.values())
+#
+# print(i)
+# print('__next__' in dir(i))     # Проверка метода Next!
+# print(next(i))
+# print(next(i))
+# print(next(i))
+# print(*i)
