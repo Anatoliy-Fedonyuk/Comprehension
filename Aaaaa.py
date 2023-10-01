@@ -224,3 +224,29 @@
 # print(next(i))
 # print(next(i))
 # print(*i)
+
+# class Counter:
+#     current: int
+#     def __init__(self):
+#         self.current = 0
+#     def __iter__(self):
+#         return self
+#     def __next__(self):
+#         current = self.current
+#         self.current += 1
+#         return current
+#
+# c = Counter()
+#
+# i = iter(c)
+# print(next(i))
+# print(next(i))
+
+### Генераторы - Что? Как?
+def some():
+    yield 1
+
+obj = some()
+print(obj)
+print(next(obj))
+print(next(obj))
