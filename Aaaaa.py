@@ -266,15 +266,18 @@
 # for i in gen: print(i)
 
 ### Контекстные менеджеры
-class Connection:
-    def __enter__(self):
-        self.connection = 1
+# class Connection:
+#     def __enter__(self):
+#         self.connection = 1
+#
+#     def __exit__(self, exc_type, exc_val, exc_tb):
+#         self.connection = 0
+#
+#
+# with Connection() as obj:
+#     print("Some Logic")
+#     raise Exception("VAL")
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.connection = 0
+### Exception - Исключения
 
-
-with Connection() as obj:
-    print("Some Logic")
-    raise Exception("VAL")
 
