@@ -242,12 +242,39 @@
 # print(next(i))
 # print(next(i))
 
-### Генераторы - Что? Как?
-def get_list():
-    for x in [1,2,3,4,5]:
-        yield x
+### Генераторы - Что? Как? Конструкция "yield from"
+# def get_list():
+#     for x in [1,2,3,4,5]:
+#         yield x
+#
+# gen = get_list()
+# for x in gen: print(x)
+# print(next(gen))    # StopIteration
+#
+# def first():
+#     yield "a"
+#     yield "b"
+#     yield "c"
+#
+# def second():
+#     yield 1
+#     yield from first()  # Говорит - дай мне все yield из first() !
+#     yield 2
+#     yield 3
+#
+# gen = second()
+# for i in gen: print(i)
 
-gen = get_list()
-for x in gen: print(x)
-print(next(gen))    # StopIteration
+### Контекстные менеджеры
+class Connection:
+    def __enter__(self):
+        self.connection = 1
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.connection = 0
+
+
+with Connection() as obj:
+    print("Some Logic")
+    raise Exception("VAL")
 
