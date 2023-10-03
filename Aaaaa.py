@@ -284,16 +284,16 @@
 # except (ValueError, TypeError):
 #     print("Value or Type Error")
 
-try:            # Как переподнять исключение в блоке exception? т.е. поднять ексепшн выше по стеку
-    try:
-        raise ValueError(1)
-    except Exception:
-        print("Inner Exception")
-        raise       # Крнечно тут с помощью raise? И Outer отработает тоже
-except Exception:
-    print("Outer Exception")
-finally:
-    print("Finally End")
+# try:            # Как переподнять исключение в блоке exception? т.е. поднять ексепшн выше по стеку
+#     try:
+#         raise ValueError(1)
+#     except Exception:
+#         print("Inner Exception")
+#         raise       # Конечно тут с помощью raise? И Outer отработает тоже
+# except Exception:
+#     print("Outer Exception")
+# finally:
+#     print("Finally End")
 
 
 
