@@ -310,10 +310,10 @@
 #     print("close all & Finish")
 
 ### Кастомная ошибка - как реализовать?
-class Custom(Exception):
-    def __init__(self, value, message="Specific message about your error"):
-        self.value = value
-        self.message = message
-        super().__init__(self.message)
-
-raise Custom(112233)
+# class Custom(Exception):
+#     def __init__(self, value, message="Specific message about your error"):
+#         self.value = value
+#         self.message = message
+#         super().__init__(self.message)
+#
+# raise Custom(112233)
