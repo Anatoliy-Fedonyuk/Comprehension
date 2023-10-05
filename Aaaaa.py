@@ -296,24 +296,24 @@
 #     print("Finally End")
 
 ### работа с ExceptionGroup, BaseExceptionGroup и оператор <except*>
-# try:
-#     eg = ExceptionGroup("exception group", [TypeError(1),
-#                         ValueError(2), ZeroDivisionError(3)])
-#     raise eg
-# except* TypeError as e:
-#     print("TypeError", e)
-# except* ValueError as ex:
-#     print("ValueError", ex)
-# except* ZeroDivisionError as z:
-#     print("ZeroDivisionError", z)
-# finally:
-#     print("close all & Finish")
+try:
+    eg = ExceptionGroup("exception group", [TypeError(1),
+                        ValueError(2), ZeroDivisionError(3)])
+    raise eg
+except* TypeError as e:
+    print("TypeError", e)
+except* ValueError as ex:
+    print("ValueError", ex)
+except* ZeroDivisionError as z:
+    print("ZeroDivisionError", z)
+finally:
+    print("close all & Finish")
 
 ### Кастомная ошибка - как реализовать?
-# class Custom(Exception):
-#     def __init__(self, value, message="Specific message about your error"):
-#         self.value = value
-#         self.message = message
-#         super().__init__(self.message)
-#
-# raise Custom(112233)
+class Custom(Exception):
+    def __init__(self, value, message="Specific message about your error"):
+        self.value = value
+        self.message = message
+        super().__init__(self.message)
+
+raise Custom(112233)
