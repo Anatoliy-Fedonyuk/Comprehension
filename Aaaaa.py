@@ -319,15 +319,31 @@
 # raise Custom(112233)
 
 ### COROUTINE - Что такое Корутина?
-import asyncio
-
-async def my_coroutine():
-    print("Start Coroutine")
-    await asyncio.sleep(2)
-    print("Coroutine Resumed")
-
-async def main():
-    await asyncio.gather(my_coroutine(), my_coroutine())
-
-asyncio.run(main())
+# import asyncio
+#
+# async def my_coroutine():
+#     print("Start Coroutine")
+#     await asyncio.sleep(2)
+#     print("Coroutine Resumed")
+#
+# async def main():
+#     await asyncio.gather(my_coroutine(), my_coroutine())
+#
+# asyncio.run(main())
+#
+# import asyncio
+#
+# async def foo():
+#     await asyncio.sleep(4)
+#     return "Foo Result"
+#
+# async def bar():
+#     await asyncio.sleep(1)
+#     return "Bar Result"
+#
+# async def main():
+#     results = await asyncio.gather(bar(), foo(), bar(), foo(), bar())
+#     print(results)
+#
+# asyncio.run(main())
 
