@@ -317,3 +317,17 @@
 #         super().__init__(self.message)
 #
 # raise Custom(112233)
+
+### COROUTINE - Что такое Корутина?
+import asyncio
+
+async def my_coroutine():
+    print("Start Coroutine")
+    await asyncio.sleep(2)
+    print("Coroutine Resumed")
+
+async def main():
+    await asyncio.gather(my_coroutine(), my_coroutine())
+
+asyncio.run(main())
+
