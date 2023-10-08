@@ -331,25 +331,55 @@
 #
 # asyncio.run(main())
 #
-import asyncio
+# import asyncio
+#
+# async def foo():
+#     await asyncio.sleep(4)
+#     return "Foo Result"
+#
+# async def bar():
+#     await asyncio.sleep(1)
+#     return "Bar Result"
+#
+# async def main():
+#     await print(bar())
+#     await print(foo())
+#     await print(bar())
+#     await print(foo())
+#     await print(bar())
+#
+#
+# asyncio.run(main())
 
-async def foo():
-    await asyncio.sleep(4)
-    return "Foo Result"
+### Dependency Inversion Principle (SOLID)
+class Switchable:
+    def turn_on(self):
+        pass
 
-async def bar():
-    await asyncio.sleep(1)
-    return "Bar Result"
+    def turn_off(self):
+        pass
 
-async def main():
-    await print(bar())
-    await print(foo())
-    await print(bar())
-    await print(foo())
-    await print(bar())
+class LightBulb(Switchable):
+    def turn_on(self):
+        print("LightBulb is on")
 
+    def turn_off(self):
+        print("LightBulb is off")
 
-asyncio.run(main())
+class LightSwitch(Switchable):
+    def __init__(self, device):
+        self.device = device
+        self.is_on = False
 
+    def operate(self):
+        if self.is_on:
+            self.device.turn_off()
+        else:
+            self.device.turn_on()
 
+# device = LightBulb()
+# device.turn_on()
+# device.turn_off()
+switch = LightSwitch(L:=LightBulb())
+switch.operate()
 
