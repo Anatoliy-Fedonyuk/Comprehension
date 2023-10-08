@@ -331,21 +331,25 @@
 #
 # asyncio.run(main())
 #
-# import asyncio
-#
-# async def foo():
-#     await asyncio.sleep(4)
-#     return "Foo Result"
-#
-# async def bar():
-#     await asyncio.sleep(1)
-#     return "Bar Result"
-#
-# async def main():
-#     results = await asyncio.gather(bar(), foo(), bar(), foo(), bar())
-#     print(results)
-#
-# asyncio.run(main())
+import asyncio
+
+async def foo():
+    await asyncio.sleep(4)
+    return "Foo Result"
+
+async def bar():
+    await asyncio.sleep(1)
+    return "Bar Result"
+
+async def main():
+    await print(bar())
+    await print(foo())
+    await print(bar())
+    await print(foo())
+    await print(bar())
+
+
+asyncio.run(main())
 
 
 
