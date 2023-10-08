@@ -352,34 +352,34 @@
 # asyncio.run(main())
 
 ### Dependency Inversion Principle (SOLID)
-class Switchable:
-    def turn_on(self):
-        pass
-
-    def turn_off(self):
-        pass
-
-class LightBulb(Switchable):
-    def turn_on(self):
-        print("LightBulb is on")
-
-    def turn_off(self):
-        print("LightBulb is off")
-
-class LightSwitch(Switchable):
-    def __init__(self, device):
-        self.device = device
-        self.is_on = False
-
-    def operate(self):
-        if self.is_on:
-            self.device.turn_off()
-        else:
-            self.device.turn_on()
-
-# device = LightBulb()
-# device.turn_on()
-# device.turn_off()
-switch = LightSwitch(L:=LightBulb())
-switch.operate()
+# class Switchable:
+#     def turn_on(self):
+#         pass
+#
+#     def turn_off(self):
+#         pass
+#
+# class LightBulb(Switchable):
+#     def turn_on(self):
+#         print("LightBulb is on")
+#
+#     def turn_off(self):
+#         print("LightBulb is off")
+#
+# class LightSwitch(Switchable):
+#     def __init__(self, device):
+#         self.device = device
+#         self.is_on = False
+#
+#     def operate(self):
+#         if self.is_on:
+#             self.device.turn_off()
+#         else:
+#             self.device.turn_on()
+#
+# # device = LightBulb()
+# # device.turn_on()
+# # device.turn_off()
+# switch = LightSwitch(L:=LightBulb())
+# switch.operate()
 
