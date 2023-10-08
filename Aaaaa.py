@@ -251,19 +251,19 @@
 # for x in gen: print(x)
 # print(next(gen))    # StopIteration
 
-def first():
-    yield "a"
-    yield "b"
-    yield "c"
-
-def second():
-    yield 1
-    yield from first()  # Говорит - дай мне все yield из first() !
-    yield 2
-    yield 3
-
-gen = second()
-for i in gen: print(i)
+# def first():
+#     yield "a"
+#     yield "b"
+#     yield "c"
+#
+# def second():
+#     yield 1
+#     yield from first()  # Говорит - дай мне все yield из first() !
+#     yield 2
+#     yield 3
+#
+# gen = second()
+# for i in gen: print(i)
 
 ### Контекстные менеджеры
 # class Connection:
@@ -346,5 +346,6 @@ for i in gen: print(i)
 #     print(results)
 #
 # asyncio.run(main())
+
 
 
