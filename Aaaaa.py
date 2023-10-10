@@ -383,6 +383,10 @@
 # switch = LightSwitch(L:=LightBulb())
 # switch.operate()
 
-data = (["been"], "py")
-data[0] += ["geek"]
-print(data)
+try:
+    data = (["been"], "py")
+    data[0].append("sos")
+    print(data)
+    data[0] += ["geek"]
+except:
+    print(data)
