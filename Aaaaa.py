@@ -385,8 +385,10 @@
 
 try:
     data = (["been"], "py")
-    data[0].append("sos")
+    data[0].extend("sos")
     print(data)
     data[0] += ["geek"]
 except:
     print(data)
+
+
