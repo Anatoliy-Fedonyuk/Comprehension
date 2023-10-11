@@ -382,13 +382,16 @@
 # # device.turn_off()
 # switch = LightSwitch(L:=LightBulb())
 # switch.operate()
+#
+# try:
+#     data = (["been"], "py")
+#     data[0].extend("sos")
+#     print(data)
+#     data[0] += ["geek"]
+#     # print(data)
+# except:
+#     print(data)
 
-try:
-    data = (["been"], "py")
-    data[0].extend("sos")
-    print(data)
-    data[0] += ["geek"]
-except:
-    print(data)
+
 
 
