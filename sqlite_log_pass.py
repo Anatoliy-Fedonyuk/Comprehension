@@ -49,4 +49,5 @@ with sq.connect("log_pass.db") as con:
 
     print(cur.execute("SELECT name, login FROM users WHERE login != '' ORDER BY name DESC").fetchall())
 
+
     # cur.execute("DROP TABLE IF EXISTS users")
