@@ -382,18 +382,22 @@
 # # device.turn_off()
 # switch = LightSwitch(L:=LightBulb())
 # switch.operate()
-#
+
 ### Поведение кортежей
-try:
-    data = (["been"], "py")
-    data[0].extend("sos")
-    print(data)
-    data[0] += ["geek"]
-    # print(data)
-except:
-    print(data)
-    print(data[::-1])
+# try:
+#     data = (["been"], "py")
+#     data[0].extend("sos")
+#     print(data)
+#     data[0] += ["geek"]
+#     # print(data)
+# except:
+#     print(data)
+#     print(data[::-1])
+
+class Shop:
+    def __init__(self, book) -> None:
+        self.book = book
 
 
-
-
+my_shop = Shop(book="All about among us")
+print(my_shop.book)
