@@ -414,8 +414,20 @@ temp = Temperature(212)
 
 # Обращаемся к атрибуту celsius, который автоматически преобразует температуру
 print(temp.celsius)  # Вывод: 100.0
-
+print(temp.temperature)
+print("$"*50)
 # Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
 temp.celsius = 0
 print(temp.temperature)  # Вывод: 32.0
+print(temp.celsius)
 
+print("$"*50)
+temp.temperature = 0
+print(temp.temperature)
+print(temp.celsius)
+
+print("$"*50)
+# Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
+temp.celsius = 0
+print(temp.temperature)  # Вывод: 32.0
+print(temp.celsius)
