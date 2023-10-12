@@ -394,25 +394,28 @@
 #     print(data)
 #     print(data[::-1])
 
+### Дескрипторы
+class Celsius:
+    def __get__(self, instance, owner):
+        return 5 * (instance.temperature - 32) / 9
 
-class Item:
-    def __set_name__(self, owner, name):
-        self.public_name = name
-        # self.protected_name = "_" + name
-        self.private_name = "__" + name
+    def __set__(self, instance, value):
+        instance.temperature = 32 + 9 * value
 
-    def __get__(self, obj, objtype=None):
-        value = getattr(obj, self.private_name, None)
-        return value
+class Temperature:
+    def __init__(self, initial):
+        self.temperature = initial
 
-    def __set__(self, obj, value):
-        setattr(obj, value)
+    # Используем дескриптор для атрибута celsius
+    celsius = Celsius()
 
+# Создаем объект Temperature с начальной температурой в Фаренгейтах
+temp = Temperature(212)
 
-class Shop:
-    def __init__(self, book) -> None:
-        self.book = book
+# Обращаемся к атрибуту celsius, который автоматически преобразует температуру
+print(temp.celsius)  # Вывод: 100.0
 
+# Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
+temp.celsius = 0
+print(temp.temperature)  # Вывод: 32.0
 
-my_shop = Shop(book="All about among us")
-print(my_shop.book)
