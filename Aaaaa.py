@@ -392,6 +392,7 @@ try:
     # print(data)
 except:
     print(data)
+    print(data[::-1])
 
 
 
