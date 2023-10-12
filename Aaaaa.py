@@ -394,6 +394,21 @@
 #     print(data)
 #     print(data[::-1])
 
+
+class Item:
+    def __set_name__(self, owner, name):
+        self.public_name = name
+        # self.protected_name = "_" + name
+        self.private_name = "__" + name
+
+    def __get__(self, obj, objtype=None):
+        value = getattr(obj, self.private_name, None)
+        return value
+
+    def __set__(self, obj, value):
+        setattr(obj, value)
+
+
 class Shop:
     def __init__(self, book) -> None:
         self.book = book
