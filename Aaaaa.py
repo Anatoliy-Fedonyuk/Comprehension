@@ -431,3 +431,4 @@ print("$"*50)
 temp.celsius = 0
 print(temp.temperature)  # Вывод: 32.0
 print(temp.celsius)
+
