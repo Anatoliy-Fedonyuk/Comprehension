@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 he Zen of Python, by Tim Peters 1999
 
+
 1. Beautiful is better than ugly.
 2. Explicit is better than implicit.
 3. Simple is better than complex.
@@ -20,6 +21,7 @@ he Zen of Python, by Tim Peters 1999
 17. If the implementation is hard to explain, it's a bad idea.
 18. If the implementation is easy to explain, it may be a good idea.
 19. Namespaces are one honking great idea -- let's do more of those!
+
 
 1. Красивое лучше, чем уродливое.
 2. Явное лучше, чем неявное.
