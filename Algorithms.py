@@ -1,4 +1,5 @@
-### Модификаторы доступа(Data Hiding) и @classmethod и @staticmethod - инструменты ИНКАПСУЛЯЦИИ!!!
+""" АЛГОРИТМЫ И ТЕОРИЯ ДЛЯ СОБЕСА!!!"""
+""" Модификаторы доступа(Data Hiding) и @classmethod и @staticmethod - инструменты ИНКАПСУЛЯЦИИ!!!"""
 # class A():
 #     def __init__(self, name='somebody'):
 #         self.name = name
