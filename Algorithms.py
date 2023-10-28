@@ -394,7 +394,7 @@
 #     print(data)
 #     print(data[::-1])
 
-### Дескрипторы
+""" Дескрипторы """
 class Celsius:
     def __get__(self, instance, owner):
         return 5 * (instance.temperature - 32) / 9
