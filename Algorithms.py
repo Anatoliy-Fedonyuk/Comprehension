@@ -123,7 +123,7 @@
 # shape = Shape()
 # print("Периметр абстрактный:", shape.perimeter())
 
-### Разница между __str__ и __repr__?
+""" Разница между __str__ и __repr__?"""
 # class Cat:
 #     def __repr__(self):
 #         return "IT`S A CAT"
