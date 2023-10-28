@@ -135,7 +135,7 @@
 # print(c)
 # print(repr(c))
 
-### метод super() и MRO (Method Resolution Order)
+""" метод super() и MRO (Method Resolution Order)"""
 # class A:
 #     def show(self):
 #         print("Метод show в классе A")
@@ -157,7 +157,7 @@
 # obj = D()
 # obj.show()
 
-### Mixin Classes
+""" Mixin Classes"""
 # Пример класса-миксина, предоставляющего логирование
 # class LoggingMixin:
 #     def log(self, message):
@@ -174,7 +174,7 @@
 # calc = Calculator()
 # calc.add(3, 5)
 
-### Замыкания, Декораторы, Декораторы с аргументами
+""" Замыкания, Декораторы, Декораторы с аргументами"""
 # def outer_function(x):
 #     # Это внешняя функция, которая принимает аргумент x
 #     def inner_function(y):
@@ -193,8 +193,9 @@
 # print(result)
 # print(res2)
 #
+
+""" Декоратор с аргументом, который определяет, сколько раз функция будет выполнена"""
 # def repeat(num):
-#     # Декоратор с аргументом, который определяет, сколько раз функция будет выполнена
 #     def decorator(func):
 #         def wrapper(*args, **kwargs):
 #             for _ in range(num):
@@ -209,7 +210,7 @@
 #
 # print(say_hello("Анна"))
 
-### Итераторы в отличии от итерируемого объекта - реализуют методы Iter и Next!!!
+""" Итераторы в отличии от итерируемого объекта - реализуют методы Iter и Next!!!"""
 # # a = [1, 2, 3, 4, 5]
 # a = {33, 4, 2, 5, 7, 3}
 # # a = 'dsdkadjkas'
@@ -225,6 +226,7 @@
 # print(next(i))
 # print(*i)
 
+""" Итератор в классе"""
 # class Counter:
 #     current: int
 #     def __init__(self):
@@ -242,7 +244,7 @@
 # print(next(i))
 # print(next(i))
 
-### Генераторы - Что? Как? Конструкция "yield from"
+""" Генераторы - Что? Как? Конструкция "yield from"""
 # def get_list():
 #     for x in [1,2,3,4,5]:
 #         yield x
@@ -265,7 +267,7 @@
 # gen = second()
 # for i in gen: print(i)
 
-### Контекстные менеджеры
+""" Контекстные менеджеры"""
 # class Connection:
 #     def __enter__(self):
 #         self.connection = 1
@@ -278,7 +280,7 @@
 #     print("Some Logic")
 #     raise Exception("VAL")
 
-### Exception - Исключения
+""" Exception - Исключения"""
 # try:
 #     raise AssertionError(1)
 # except (ValueError, TypeError):
@@ -295,7 +297,7 @@
 # finally:
 #     print("Finally End")
 
-### работа с ExceptionGroup, BaseExceptionGroup и оператор <except*>
+""" работа с ExceptionGroup, BaseExceptionGroup и оператор <except*>"""
 # try:
 #     eg = ExceptionGroup("exception group", [TypeError(1),
 #                         ValueError(2), ZeroDivisionError(3)])
@@ -309,7 +311,7 @@
 # finally:
 #     print("close all & Finish")
 #
-# ### Кастомная ошибка - как реализовать?
+""" Кастомная ошибка - как реализовать? """
 # class Custom(Exception):
 #     def __init__(self, value, message="Specific message about your error"):
 #         self.value = value
@@ -318,7 +320,7 @@
 #
 # raise Custom(112233)
 
-### COROUTINE - Что такое Корутина?
+""" COROUTINE - Что такое Корутина? """
 # import asyncio
 #
 # async def my_coroutine():
@@ -351,7 +353,7 @@
 #
 # asyncio.run(main())
 
-### Dependency Inversion Principle (SOLID)
+""" Dependency Inversion Principle (SOLID) """
 # class Switchable:
 #     def turn_on(self):
 #         pass
@@ -383,7 +385,7 @@
 # switch = LightSwitch(L:=LightBulb())
 # switch.operate()
 
-### Поведение кортежей
+""" Поведение кортежей """
 # try:
 #     data = (["been"], "py")
 #     data[0].extend("sos")
