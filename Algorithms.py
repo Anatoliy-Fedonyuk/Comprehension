@@ -398,40 +398,44 @@
 #     print(data[::-1])
 
 """ Дескрипторы """
-class Celsius:
-    def __get__(self, instance, owner):
-        return 5 * (instance.temperature - 32) / 9
+# class Celsius:
+#     def __get__(self, instance, owner):
+#         return 5 * (instance.temperature - 32) / 9
+#
+#     def __set__(self, instance, value):
+#         instance.temperature = 32 + 9 * value
+#
+# class Temperature:
+#     def __init__(self, initial):
+#         self.temperature = initial
+#
+#     # Используем дескриптор для атрибута celsius
+#     celsius = Celsius()
+#
+# # Создаем объект Temperature с начальной температурой в Фаренгейтах
+# temp = Temperature(212)
+#
+# # Обращаемся к атрибуту celsius, который автоматически преобразует температуру
+# print(temp.celsius)  # Вывод: 100.0
+# print(temp.temperature)
+# print("$"*50)
+# # Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
+# temp.celsius = 0
+# print(temp.temperature)  # Вывод: 32.0
+# print(temp.celsius)
+#
+# print("$"*50)
+# temp.temperature = 0
+# print(temp.temperature)
+# print(temp.celsius)
+#
+# print("$"*50)
+# # Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
+# temp.celsius = 0
+# print(temp.temperature)  # Вывод: 32.0
+# print(temp.celsius)
 
-    def __set__(self, instance, value):
-        instance.temperature = 32 + 9 * value
+""" АЛГОРИТМЫ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! """
 
-class Temperature:
-    def __init__(self, initial):
-        self.temperature = initial
-
-    # Используем дескриптор для атрибута celsius
-    celsius = Celsius()
-
-# Создаем объект Temperature с начальной температурой в Фаренгейтах
-temp = Temperature(212)
-
-# Обращаемся к атрибуту celsius, который автоматически преобразует температуру
-print(temp.celsius)  # Вывод: 100.0
-print(temp.temperature)
-print("$"*50)
-# Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
-temp.celsius = 0
-print(temp.temperature)  # Вывод: 32.0
-print(temp.celsius)
-
-print("$"*50)
-temp.temperature = 0
-print(temp.temperature)
-print(temp.celsius)
-
-print("$"*50)
-# Меняем значение атрибута celsius, и оно автоматически преобразуется в Фаренгейты
-temp.celsius = 0
-print(temp.temperature)  # Вывод: 32.0
-print(temp.celsius)
-
+""" Сортировка Выбором """
+# Подходит для массивов чисел или однотипных данных которые можно
