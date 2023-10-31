@@ -1,1 +1,32 @@
-[{"name": "Artur", "age": "13", "gender": "male"}, {"name": "Kate", "age": "39", "gender": "female"}, {"name": "Alice", "age": "67", "gender": "female"}, {"name": "Mike", "age": "90", "gender": "male"}, {"name": "Nike", "age": "66", "gender": "male"}, {"name": "Lilu", "age": "23", "gender": "female"}]
+[
+  {
+    "name": "Artur",
+    "age": "13",
+    "gender": "male"
+  },
+  {
+    "name": "Kate",
+    "age": "39",
+    "gender": "female"
+  },
+  {
+    "name": "Alice",
+    "age": "67",
+    "gender": "female"
+  },
+  {
+    "name": "Mike",
+    "age": "90",
+    "gender": "male"
+  },
+  {
+    "name": "Nike",
+    "age": "66",
+    "gender": "male"
+  },
+  {
+    "name": "Lilu",
+    "age": "23",
+    "gender": "female"
+  }
+]
