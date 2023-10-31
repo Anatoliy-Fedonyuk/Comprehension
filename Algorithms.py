@@ -563,31 +563,19 @@
 # print(a)
 
 """ Пример использования СТЭК типа LIFO """
-# LIFO - Last-In-First-Out
-a = input("Введите строку: ")
-stack = []
-flVerify = True
-
-for lt in a:
-    if lt in "([{":
-        stack.append(lt)
-    elif lt in ")]}":
-        if len(stack) == 0:
-            flVerify = False
-            break
-
-        br = stack.pop()
-        if br == '(' and lt == ')':
-            continue
-        if br == '[' and lt == ']':
-            continue
-        if br == '{' and lt == '}':
-            continue
-
-        flVerify = False
-        break
-
-if flVerify and len(stack) == 0:    # стек по итогам проверок должен быть пустым
-    print("Yes")
-else:
-    print("No")
+# # LIFO - Last-In-First-Out
+# flVerify, stack = True, []
+#
+# for lt in input("Введите: "):
+#     if lt in "([{":
+#         stack.append(lt)
+#     elif lt in ")]}":
+#         if len(stack) == 0: flVerify = False; break
+#
+#         br = stack.pop()
+#         if br == '(' and lt == ')': continue
+#         elif br == '[' and lt == ']': continue
+#         elif br == '{' and lt == '}': continue
+#         else: flVerify = False; break
+#
+# print(("No", "Yes")[flVerify and not len(stack)])
