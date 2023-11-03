@@ -542,43 +542,43 @@
 # print(a)
 
 """ Быстрая сортировка слиянием Хоара с рекурсией/ O(n*log2(n)) что значительно меньше O(n^2)"""
-# # Этот алгоритм экономит память! Потому что сортирует массив "in place" - не создавая новых массивов
-# from random import randint
-#
-#
-# def quick_sort(a):
-#     if len(a) > 1:
-#         x = a[randint(0, len(a) - 1)]  # случайное значение (для разделения на малые и большие)
-#         low = [u for u in a if u < x]     # в настоящем алгор.Хоара так не делают а работают внутри массива))
-#         eq = [u for u in a if u == x]
-#         hi = [u for u in a if u > x]
-#         a = quick_sort(low) + eq + quick_sort(hi)
-#
-#     return a
-#
-#
-# a = [9, 5, -3, 4, 7, 8, -8]
-# a = quick_sort(a)
-#
-# print(a)
+# Этот алгоритм экономит память! Потому что сортирует массив "in place" - не создавая новых массивов
+from random import randint
+
+
+def quick_sort(a):
+    if len(a) > 1:
+        x = a[randint(0, len(a) - 1)]  # случайное значение (для разделения на малые и большие)
+        low = [u for u in a if u < x]     # в настоящем алгор.Хоара так не делают а работают внутри массива))
+        eq = [u for u in a if u == x]
+        hi = [u for u in a if u > x]
+        a = quick_sort(low) + eq + quick_sort(hi)
+
+    return a
+
+
+a = [9, 5, -3, 4, 7, 8, -8]
+a = quick_sort(a)
+
+print(a)
 
 """ Пример использования СТЭК типа LIFO """
-# LIFO - Last-In-First-Out
-flVerify, stack = True, []
-
-for lt in input("Введите: "):
-    if lt in "([{":
-        stack.append(lt)
-    elif lt in ")]}":
-        if len(stack) == 0: flVerify = False; break
-
-        br = stack.pop()
-        if br == '(' and lt == ')': continue
-        elif br == '[' and lt == ']': continue
-        elif br == '{' and lt == '}': continue
-        else: flVerify = False; break
-
-print(("No", "Yes")[flVerify and not len(stack)])
+# # LIFO - Last-In-First-Out
+# flVerify, stack = True, []
+#
+# for lt in input("Введите: "):
+#     if lt in "([{":
+#         stack.append(lt)
+#     elif lt in ")]}":
+#         if len(stack) == 0: flVerify = False; break
+#
+#         br = stack.pop()
+#         if br == '(' and lt == ')': continue
+#         elif br == '[' and lt == ']': continue
+#         elif br == '{' and lt == '}': continue
+#         else: flVerify = False; break
+#
+# print(("No", "Yes")[flVerify and not len(stack)])
 
 """ Делаем очередь (Queue) / модуль Collections - Deque/В отличии от LIFO - тут FIFO (First-On-First-Out)"""
 # Однонаправленные очереди идеально делать с помощью метода Deque (есть методы .popleft, .appendleft)
