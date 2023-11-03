@@ -543,24 +543,24 @@
 
 """ Быстрая сортировка слиянием Хоара с рекурсией/ O(n*log2(n)) что значительно меньше O(n^2)"""
 # Этот алгоритм экономит память! Потому что сортирует массив "in place" - не создавая новых массивов
-from random import randint
-
-
-def quick_sort(a):
-    if len(a) > 1:
-        x = a[randint(0, len(a) - 1)]  # случайное значение (для разделения на малые и большие)
-        low = [u for u in a if u < x]     # в настоящем алгор.Хоара так не делают а работают внутри массива))
-        eq = [u for u in a if u == x]
-        hi = [u for u in a if u > x]
-        a = quick_sort(low) + eq + quick_sort(hi)
-
-    return a
-
-
-a = [9, 5, -3, 4, 7, 8, -8]
-a = quick_sort(a)
-
-print(a)
+# from random import randint
+#
+#
+# def quick_sort(a):
+#     if len(a) > 1:
+#         x = a[randint(0, len(a) - 1)]  # случайное значение (для разделения на малые и большие)
+#         low = [u for u in a if u < x]     # в настоящем алгор.Хоара так не делают а работают внутри массива))
+#         eq = [u for u in a if u == x]
+#         hi = [u for u in a if u > x]
+#         a = quick_sort(low) + eq + quick_sort(hi)
+#
+#     return a
+#
+#
+# a = [9, 5, -3, 4, 7, 8, -8]
+# a = quick_sort(a)
+#
+# print(a)
 
 """ Пример использования СТЭК типа LIFO """
 # # LIFO - Last-In-First-Out
