@@ -583,13 +583,13 @@
 """ Делаем очередь (Queue) / модуль Collections - Deque/В отличии от LIFO - тут FIFO (First-On-First-Out)"""
 # Однонаправленные очереди идеально делать с помощью метода Deque (есть методы .popleft, .appendleft)
 # C помощью Deque - конечно можно и организовывать и Стэк. Вставка граничных элементов реализована O(1)
-# import collections
-#
-# q = collections.deque()
-#
-# q.extend((4, -7, 2, 0))
-# print(q)
-# q.appendleft(-3); print(q.pop()) # Очередь вправо!!!)
-# print(q)
-# q.append(9); print(q.popleft()) # Очередь влево!!!)
-# print(q)
+import collections
+
+q = collections.deque()
+
+q.extend((4, -7, 2, 0))
+print(q)
+q.appendleft(-3); print(q.pop()) # Очередь вправо!!!)
+print(q)
+q.append(9); print(q.popleft()) # Очередь влево!!!)
+print(q)
