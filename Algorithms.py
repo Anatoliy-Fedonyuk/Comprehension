@@ -593,3 +593,6 @@ q.appendleft(-3); print(q.pop()) # Очередь вправо!!!)
 print(q)
 q.append(9); print(q.popleft()) # Очередь влево!!!)
 print(q)
+
+
+
