@@ -563,22 +563,22 @@
 # print(a)
 
 """ Пример использования СТЭК типа LIFO """
-# # LIFO - Last-In-First-Out
-# flVerify, stack = True, []
-#
-# for lt in input("Введите: "):
-#     if lt in "([{":
-#         stack.append(lt)
-#     elif lt in ")]}":
-#         if len(stack) == 0: flVerify = False; break
-#
-#         br = stack.pop()
-#         if br == '(' and lt == ')': continue
-#         elif br == '[' and lt == ']': continue
-#         elif br == '{' and lt == '}': continue
-#         else: flVerify = False; break
-#
-# print(("No", "Yes")[flVerify and not len(stack)])
+# LIFO - Last-In-First-Out
+flVerify, stack = True, []
+
+for lt in input("Введите: "):
+    if lt in "([{":
+        stack.append(lt)
+    elif lt in ")]}":
+        if len(stack) == 0: flVerify = False; break
+
+        br = stack.pop()
+        if br == '(' and lt == ')': continue
+        elif br == '[' and lt == ']': continue
+        elif br == '{' and lt == '}': continue
+        else: flVerify = False; break
+
+print(("No", "Yes")[flVerify and not len(stack)])
 
 """ Делаем очередь (Queue) / модуль Collections - Deque/В отличии от LIFO - тут FIFO (First-On-First-Out)"""
 # # Однонаправленные очереди идеально делать с помощью метода Deque (есть методы .popleft, .appendleft)
