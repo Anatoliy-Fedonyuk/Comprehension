@@ -461,7 +461,7 @@ class Wallet:
 #     print(wallet().__hash__())
 #
 
-class Frozendict(dict):
-    def __init__(self, key, value):
-        self.container = set()
-        self.container.update(banknotes)
+# class Frozendict(dict):
+#     def __init__(self, key, value):
+#         self.container = set()
+#         self.container.update(banknotes)
